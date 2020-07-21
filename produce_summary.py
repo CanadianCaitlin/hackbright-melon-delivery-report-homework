@@ -1,6 +1,5 @@
-def produce_summary(file):
+def produce_summary(file, day):
     the_file = open(file)
-    day = 1
     print(f"Day {day}")
     for line in the_file:
         line = line.rstrip()
@@ -13,9 +12,10 @@ def produce_summary(file):
         print(f"Delivered {count} {melon}s for total of ${amount}")
     
     the_file.close()
-    day = day + 1
 
-print(produce_summary("um-deliveries-20140519.txt"))
+print(produce_summary("um-deliveries-20140519.txt", 1))
+print(produce_summary("um-deliveries-20140520.txt", 2))
+print(produce_summary("um-deliveries-20140521.txt", 3))
 
 
 
